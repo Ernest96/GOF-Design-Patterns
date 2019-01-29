@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EC5597E-3B08-4E00-8A37-1A2ECAAB27C2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FactoryMethod</RootNamespace>
+    <AssemblyName>FactoryMethod</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\Factories\AbstractLevelFactory.cs" />
+    <Compile Include="AbstractFactory\Maps\MountainsMap.cs" />
+    <Compile Include="AbstractFactory\Heroes\Hero.cs" />
+    <Compile Include="AbstractFactory\Game.cs" />
+    <Compile Include="AbstractFactory\Heroes\Knight.cs" />
+    <Compile Include="AbstractFactory\Level.cs" />
+    <Compile Include="AbstractFactory\Factories\Level1Factory.cs" />
+    <Compile Include="AbstractFactory\Factories\Level2Factory.cs" />
+    <Compile Include="AbstractFactory\Maps\Map.cs" />
+    <Compile Include="AbstractFactory\Heroes\Ninja.cs" />
+    <Compile Include="AbstractFactory\Maps\WoodMap.cs" />
+    <Compile Include="AbstractFactory\Time.cs" />
+    <Compile Include="Adapter\Robot.cs" />
+    <Compile Include="Adapter\IEnemyDestroyer.cs" />
+    <Compile Include="Adapter\RobotAdapter.cs" />
+    <Compile Include="Adapter\Tank.cs" />
+    <Compile Include="Bridge\DvdDevice.cs" />
+    <Compile Include="Bridge\EntertainmentDevice.cs" />
+    <Compile Include="Bridge\RemoteButton.cs" />
+    <Compile Include="Bridge\TVDevice.cs" />
+    <Compile Include="Bridge\UniversalRemote.cs" />
+    <Compile Include="Builder\Classic\AndroidNotificationBuilder.cs" />
+    <Compile Include="Builder\Classic\Common\Notification Sound.cs" />
+    <Compile Include="Builder\Classic\Common\NotificationIcon.cs" />
+    <Compile Include="Builder\Classic\NotificationBuilder.cs" />
+    <Compile Include="Builder\Classic\IosNotificationBuilder.cs" />
+    <Compile Include="Builder\Fluent\FluentNotificationBuilder.cs" />
+    <Compile Include="Builder\Notification.cs" />
+    <Compile Include="Builder\Classic\NotificationService.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\Remote.cs" />
+    <Compile Include="Command\TV.cs" />
+    <Compile Include="Command\VolumeUp.cs" />
+    <Compile Include="Composite\Builder\DataComponentBuilder.cs" />
+    <Compile Include="Composite\Builder\FileBuilder.cs" />
+    <Compile Include="Composite\Builder\FolderBuilder.cs" />
+    <Compile Include="Composite\DataComponent.cs" />
+    <Compile Include="Composite\File.cs" />
+    <Compile Include="Composite\Folder.cs" />
+    <Compile Include="Decorator\Armor.cs" />
+    <Compile Include="Decorator\Hero.cs" />
+    <Compile Include="Decorator\Knife.cs" />
+    <Compile Include="Decorator\Ninja.cs" />
+    <Compile Include="Decorator\HeroDecorator.cs" />
+    <Compile Include="Fasade\Configuration.cs" />
+    <Compile Include="Fasade\ClientInfoFasade.cs" />
+    <Compile Include="FactoryMethod\EX1\JSONReader.cs" />
+    <Compile Include="FactoryMethod\EX1\Reader.cs" />
+    <Compile Include="FactoryMethod\EX1\ReaderFactory.cs" />
+    <Compile Include="FactoryMethod\EX1\XMLReader.cs" />
+    <Compile Include="FactoryMethod\EX2\AudioConverter.cs" />
+    <Compile Include="FactoryMethod\EX2\AudioConverterFactory.cs" />
+    <Compile Include="FactoryMethod\EX2\IConverter.cs" />
+    <Compile Include="FactoryMethod\EX2\IFactory.cs" />
+    <Compile Include="FactoryMethod\EX2\VideoConverter.cs" />
+    <Compile Include="FactoryMethod\EX2\VideoConverterFactory.cs" />
+    <Compile Include="Fasade\DbConnection.cs" />
+    <Compile Include="Fasade\Person.cs" />
+    <Compile Include="Fasade\PersonsCache.cs" />
+    <Compile Include="Fasade\PersonsDb.cs" />
+    <Compile Include="FlyWeight\FileIcon.cs" />
+    <Compile Include="FlyWeight\FlyWeightIcon.cs" />
+    <Compile Include="FlyWeight\FolderIcon.cs" />
+    <Compile Include="FlyWeight\IconFactory.cs" />
+    <Compile Include="Explorer.cs" />
+    <Compile Include="Iterator\Agregate.cs" />
+    <Compile Include="Iterator\ConcreteAgregate.cs" />
+    <Compile Include="Iterator\ConcreteIterator.cs" />
+    <Compile Include="Iterator\Iterator.cs" />
+    <Compile Include="Mediator\AbstractUser.cs" />
+    <Compile Include="Mediator\ChatMediator.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Mediator\User1.cs" />
+    <Compile Include="Mediator\User2.cs" />
+    <Compile Include="Memento\Caretaker.cs" />
+    <Compile Include="Memento\Memento.cs" />
+    <Compile Include="Memento\Originator.cs" />
+    <Compile Include="Observer\ConcreteObserver.cs" />
+    <Compile Include="Observer\ConcreteSubject.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Subject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prototype\IEnemy.cs" />
+    <Compile Include="Prototype\Ninja.cs" />
+    <Compile Include="Prototype\Robot.cs" />
+    <Compile Include="Proxy\DbData.cs" />
+    <Compile Include="Proxy\DbDataProxy.cs" />
+    <Compile Include="Proxy\IData.cs" />
+    <Compile Include="State\Televizor.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="State\StateOff.cs" />
+    <Compile Include="State\StateOn.cs" />
+    <Compile Include="Strategy\Context.cs" />
+    <Compile Include="Strategy\InsertionSort.cs" />
+    <Compile Include="Strategy\QuickSort.cs" />
+    <Compile Include="Strategy\Strategy.cs" />
+    <Compile Include="Visitor\ConcreteVisitorA.cs" />
+    <Compile Include="Visitor\ConcreteVisitorB.cs" />
+    <Compile Include="Visitor\ObjectStructure.cs" />
+    <Compile Include="Visitor\Person.cs" />
+    <Compile Include="Visitor\Profesor.cs" />
+    <Compile Include="Visitor\Student.cs" />
+    <Compile Include="Visitor\Visitor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
